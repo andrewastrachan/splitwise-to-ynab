@@ -2,3 +2,5 @@
 /lib
 /coverage
 .nyc_output
+out
+test.js
