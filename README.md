@@ -1,4 +1,5 @@
 # splitwise-to-ynab
+NOTE: don't use, still buggy :P
 
 ## Running it
 
