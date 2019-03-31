@@ -41,7 +41,9 @@
     "nyc": "^13.2.0",
     "rimraf": "^2.6.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "csv-parse": "^4.3.4"
+  },
   "keywords": [
     "splitwise",
     "ynab",
