@@ -1,0 +1,1 @@
+# splitwise-to-ynab
