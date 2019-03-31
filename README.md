@@ -15,6 +15,7 @@ Date,Description,Category,Cost,Currency,Friend,Your Name
 7/31/18,May - end of July expenses,General,2270.76,USD,2270.76,-2270.76
 8/1/18,August rent,Rent,500,USD,-500,500
 8/1/18,Emergency Lights out Orchard Supply,General,63.33,USD,31.67,-31.67
+3/31/19,Total balance, , ,USD,-19,19
 ```
 
 you would run...

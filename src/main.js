@@ -54,6 +54,7 @@ async function readWriteCSV(readPath, writePath, transformer) {
 
 function createTransformer(identityLabel) {
   let headersConfig;
+  console.log({ identityLabel });
 
   return function (data, index) {
     if (index == 0) {
@@ -80,7 +81,7 @@ function createTransformer(identityLabel) {
       date,
       description,
       category,
-      transactionValueNum < 0 ? transactionValueNum : '',
+      transactionValueNum < 0 ? Math.abs(transactionValueNum) : '',
       transactionValueNum > 0 ? transactionValueNum : ''
     ];
   };
