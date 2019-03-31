@@ -1,0 +1,52 @@
+{
+  "name": "splitwise-to-ynab",
+  "version": "1.0.0",
+  "description": "converts a splitwise csv export to ynab-importable csv",
+  "main": "src/main.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "test:watch": "npm test -- --watch",
+    "test": "mocha --require @babel/register --require @babel/polyfill --recursive",
+    "lint": "eslint src",
+    "cover": "nyc npm run test",
+    "build": "babel src --out-dir lib",
+    "prepublishOnly": "npm run clean && npm run lint && npm run cover && npm run build && npm version ${VERSION_INCREMENT}",
+    "postversion": "git push && git push --tags",
+    "deploy:patch": "cross-env VERSION_INCREMENT=patch npm run deploy",
+    "deploy:minor": "cross-env VERSION_INCREMENT=minor npm run deploy",
+    "deploy:major": "cross-env VERSION_INCREMENT=major npm run deploy",
+    "deploy": "npm publish --public"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/eslint-plugin-development": "^1.0.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-minify": "^0.5.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-preset-minify": "^0.5.0",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-import-resolver-babel-module": "^5.0.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "mocha": "^5.2.0",
+    "nyc": "^13.2.0",
+    "rimraf": "^2.6.3"
+  },
+  "dependencies": {},
+  "keywords": [
+    "splitwise",
+    "ynab",
+    "csv"
+  ],
+  "author": "Andrew A Strachan",
+  "license": "ISC"
+}
