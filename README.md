@@ -22,7 +22,7 @@ Date,Description,Category,Cost,Currency,Friend,Your Name
 you would run...
 
 ```
-splitwise-to-ynab -i splitwise-export.csv -o ynab-import.csv -i 'Your Name'
+splitwise-to-ynab -f splitwise-export.csv -o ynab-import.csv -i 'Your Name'
 ```
 
 and you would expect this output...
